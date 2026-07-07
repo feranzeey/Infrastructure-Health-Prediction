@@ -1,30 +1,30 @@
 # Infrastructure Health Prediction
 
-## Overview
-
-Infrastructure Health Prediction is a DevOps monitoring project that demonstrates how predictive analytics can be used to monitor infrastructure health, detect potential issues, and generate automated health reports.
-
-The project combines Docker, Prometheus, Grafana, Python, and system monitoring techniques to analyze infrastructure metrics and provide recommendations before failures occur.
+> A hands-on DevOps project demonstrating infrastructure monitoring, health analysis, predictive reporting, and observability using Python, Docker, Prometheus, Grafana, and Node Exporter.
 
 ---
 
-## Objectives
+## Project Overview
 
-- Analyze historical infrastructure failures
-- Predict potential infrastructure issues
-- Forecast disk space exhaustion
-- Monitor CPU and memory utilization
-- Detect possible network congestion
-- Identify security anomalies
-- Recommend infrastructure cost optimization
-- Generate automated infrastructure health reports
+Modern production environments require continuous monitoring to maintain high availability and prevent unexpected failures.
+
+Infrastructure Health Prediction demonstrates how DevOps engineers can deploy a monitoring stack, collect infrastructure metrics, analyze system health, detect potential infrastructure risks, and generate automated health reports.
+
+This project combines Python automation with industry-standard monitoring tools to simulate a real-world infrastructure monitoring workflow.
 
 ---
 
-## Technologies Used
+# Architecture
+
+![Architecture](screenshots/architecture.png)
+
+---
+
+# Technologies Used
 
 - Python 3
 - Docker
+- Docker Compose
 - Prometheus
 - Grafana
 - Node Exporter
@@ -35,82 +35,53 @@ The project combines Docker, Prometheus, Grafana, Python, and system monitoring 
 
 ---
 
-## Project Structure
+# Features
 
-```
+- Infrastructure Health Monitoring
+- Historical Failure Analysis
+- CPU Monitoring
+- Memory Monitoring
+- Disk Space Prediction
+- Network Monitoring
+- Security Detection
+- Infrastructure Cost Optimization
+- Automated Health Reporting
+- Docker-based Monitoring Stack
+
+---
+
+# Project Structure
+
+```text
 Infrastructure-Health-Prediction/
-│
-├── data/
-│   └── infrastructure_metrics.csv
-│
-├── reports/
-│   └── health_report.txt
-│
+
 ├── screenshots/
-│
 ├── scripts/
-│   └── failure_prediction.py
-│
-├── cost_optimizer.py
-├── disk_prediction.py
+├── data/
+├── reports/
 ├── docker-compose.yml
-├── health_report.py
-├── network_prediction.py
-├── resource_prediction.py
-├── security_detection.py
+├── prometheus.yml
 ├── requirements.txt
-└── README.md
+├── README.md
 ```
 
 ---
 
-## Features
+# Installation
 
-### Historical Failure Analysis
-
-Analyzes historical infrastructure metrics and identifies periods with increased failure risk.
-
-### Disk Space Forecasting
-
-Monitors disk utilization and predicts possible storage exhaustion.
-
-### Resource Monitoring
-
-Tracks CPU and memory usage and generates warnings when usage exceeds predefined thresholds.
-
-### Network Monitoring
-
-Monitors network traffic and predicts possible congestion.
-
-### Security Monitoring
-
-Checks authentication logs for failed login attempts to identify potential security anomalies.
-
-### Cost Optimization
-
-Provides recommendations to scale infrastructure resources based on current utilization.
-
-### Automated Health Reports
-
-Generates infrastructure reports containing:
-
-- CPU Usage
-- Memory Usage
-- Disk Usage
-- Overall Infrastructure Health Status
-
----
-
-## Installation
-
-Clone the repository.
+Clone the repository
 
 ```bash
 git clone https://github.com/feranzeey/Infrastructure-Health-Prediction.git
+```
+
+Move into the project
+
+```bash
 cd Infrastructure-Health-Prediction
 ```
 
-Install dependencies.
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -118,67 +89,13 @@ pip install -r requirements.txt
 
 ---
 
-## Running the Project
-
-### Failure Prediction
-
-```bash
-python scripts/failure_prediction.py
-```
-
-### Disk Prediction
-
-```bash
-python disk_prediction.py
-```
-
-### Resource Prediction
-
-```bash
-python resource_prediction.py
-```
-
-### Network Prediction
-
-```bash
-python network_prediction.py
-```
-
-### Security Detection
-
-```bash
-python security_detection.py
-```
-
-### Cost Optimization
-
-```bash
-python cost_optimizer.py
-```
-
-### Generate Infrastructure Health Report
-
-```bash
-python health_report.py
-```
-
-The generated report will be saved in:
-
-```
-reports/health_report.txt
-```
-
----
-
-## Docker Monitoring Stack
-
-Start the monitoring environment.
+# Start the Monitoring Stack
 
 ```bash
 docker compose up -d
 ```
 
-Services:
+The following services will start:
 
 - Prometheus
 - Grafana
@@ -186,7 +103,103 @@ Services:
 
 ---
 
-## Example Health Report
+# Run the Prediction Modules
+
+Failure Prediction
+
+```bash
+python scripts/failure_prediction.py
+```
+
+Resource Prediction
+
+```bash
+python scripts/resource_prediction.py
+```
+
+Disk Prediction
+
+```bash
+python scripts/disk_prediction.py
+```
+
+Network Prediction
+
+```bash
+python scripts/network_prediction.py
+```
+
+Security Detection
+
+```bash
+python scripts/security_detection.py
+```
+
+Cost Optimization
+
+```bash
+python scripts/cost_optimizer.py
+```
+
+Generate Health Report
+
+```bash
+python scripts/health_report.py
+```
+
+---
+
+# Project Demonstration
+
+## Docker Monitoring Stack
+
+Docker Compose successfully deploys Prometheus, Grafana, and Node Exporter.
+
+![Docker Stack](screenshots/docker-stack.png)
+
+---
+
+## Infrastructure Failure Prediction
+
+The prediction module analyzes historical infrastructure metrics and identifies high-risk periods.
+
+![Failure Prediction](screenshots/failure-prediction.png)
+
+---
+
+## Generated Infrastructure Health Report
+
+The project automatically generates an infrastructure health report.
+
+![Health Report](screenshots/health-report.png)
+
+---
+
+## Prometheus Monitoring
+
+Prometheus collects and stores infrastructure metrics.
+
+![Prometheus Dashboard](screenshots/prometheus-dashboard.png)
+
+---
+
+## Grafana Dashboard
+
+Grafana visualizes infrastructure metrics for real-time monitoring.
+
+![Grafana Dashboard](screenshots/grafana-dashboard.png)
+
+---
+
+## VS Code Project
+
+Development environment used for the project.
+
+![VS Code](screenshots/project-structure.png)
+
+---
+
+# Example Health Report
 
 ```
 Infrastructure Health Report
@@ -203,35 +216,53 @@ Attention Required
 
 ---
 
-## Future Improvements
-
-- Email notifications
-- Slack alert integration
-- Machine learning-based predictions
-- Kubernetes monitoring
-- Cloud infrastructure monitoring
-- Grafana dashboards with predictive analytics
-- Automated scheduling using cron or Task Scheduler
-
----
-
-## Learning Outcomes
-
-This project demonstrates practical knowledge of:
+# Skills Demonstrated
 
 - Infrastructure Monitoring
-- Predictive Maintenance
-- Python Automation
-- Docker
+- Docker Compose
 - Prometheus
 - Grafana
-- System Health Reporting
-- DevOps Monitoring Practices
+- Node Exporter
+- Python Automation
+- Linux Monitoring
+- Observability
+- Infrastructure Reporting
+- DevOps Best Practices
 
 ---
 
-## Author
+# Learning Outcomes
+
+After completing this project, learners will understand how to:
+
+- Deploy monitoring infrastructure
+- Configure Prometheus
+- Build Grafana dashboards
+- Monitor Linux resources
+- Automate infrastructure health analysis
+- Generate health reports
+- Apply observability concepts
+
+---
+
+# Future Improvements
+
+- Email Alerts
+- Slack Notifications
+- Microsoft Teams Integration
+- Kubernetes Monitoring
+- AWS CloudWatch Integration
+- Azure Monitor Integration
+- Machine Learning Predictions
+- Grafana Alert Rules
+- Multi-Server Monitoring
+
+---
+
+# Author
 
 **Oluwaferanmi Dada**
 
 GitHub: https://github.com/feranzeey
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
